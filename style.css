@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1.5;
+}
+body {
+  background: #0f1115;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  padding: 40px 20px;
+  border-bottom: 1px solid #222;
+}
+
+.hero-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #2b7cff;
+  object-fit: cover;
+}
+
+.role {
+  color: #2b7cff;
+}
+
+.desc {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* TAGS */
+.tags span {
+  display: inline-block;
+  background: #1a1f2a;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid #2b7cff33;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.section h2 {
+  color: #2b7cff;
+  margin-bottom: 10px;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 6px;
+  border: none;
+  background: #1a1f2a;
+  color: white;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* CARD */
+.card {
+  background: #151922;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  transition: 0.2s;
+  animation: fadeIn 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(43, 124, 255, 0.2);
+  border-color: #2b7cff;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2b7cff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* SPINNER */
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 30px auto;
+  border: 4px solid #1a1f2a;
+  border-top: 4px solid #2b7cff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+}
