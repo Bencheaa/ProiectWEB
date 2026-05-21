@@ -3,53 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bencheaa | Portfolio</title>
+  <title>Benchea | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER (profil / nume) -->
   <header class="hero">
     <div class="hero-content">
       <img src="assets/profile.jpg" class="avatar" alt="Profile">
 
       <div>
-        <h1>Bencheaa</h1>
-        <p class="role">Software Engineering Student</p>
+        <h1>Benchea Larisa-Diana</h1>
+        <p class="role">Software Engineering Student (Year II)</p>
         <p class="desc">
-          Passionate about software engineering, systems and web development.
+          Software Engineering student at the Faculty of Engineering (Sibiu), focused on building solid fundamentals in software engineering.
+      
         </p>
 
         <div class="tags">
+          <span>C/C++</span>
+          <span>Java</span>
+          <span>Python</span>
+          <span>JavaScript</span>
           <span>HTML</span>
           <span>CSS</span>
-          <span>JavaScript</span>
-          <span>PHP</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- MAIN LAYOUT -->
-  <div class="container">
 
-    <!-- LEFT: CV -->
+  <div class="container">
     <div class="left">
 
       <section class="section">
         <h2>Education</h2>
-        <p>Faculty of Engineering, Computer Science — 2024 - present</p>
+        <div class="card info-card">
+          <p>
+            <strong>Faculty of Engineering, Sibiu</strong><br>
+            Computer Engineering — Year II
+          </p>
+          <p>
+            <strong>Workshops & extracurricular</strong><br>
+            Arduino Workshop “Eat Sleep Code Repeat” (NXP) — hands-on embedded development using NXP microcontrollers/boards to develop, configure, and test hardware–software applications.
+          </p>
+          <p>
+            Key subjects: Object-Oriented Programming, Data Structures, Algorithms, Computer Architecture.
+          </p>
+        </div>
       </section>
 
       <section class="section">
         <h2>Experience</h2>
-        <p>University projects: OpenGL, Web apps, Embedded systems.</p>
+        <div class="card info-card">
+          <p>
+            <strong>Customer Support Specialist</strong><br>
+            • Resolved complex customer situations through clear, effective communication.<br>
+            • Used English daily with international clients and stakeholders.<br>
+          </p>
+        </div>
       </section>
 
     </div>
 
-    <!-- RIGHT: PROJECTS -->
+    
     <div class="right">
 
       <section class="section">
@@ -58,10 +76,12 @@
         <input type="text" id="searchInput" placeholder="Search by name or language...">
 
         <div id="projects" class="grid"></div>
+        <button id="loadMoreBtn" class="load-more hidden" type="button">Load more</button>
+        <button id="showLessBtn" class="load-more hidden" type="button">Show less</button>
       </section>
 
       <div id="loading" class="spinner"></div>
-      <div id="error" class="hidden">Failed to load projects.</div>
+      <div id="error" class="hidden">Ups! Nu am putut încărca proiectele momentan.</div>
 
     </div>
 
