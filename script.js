@@ -70,7 +70,7 @@ async function getGithubRepos() {
         const msg = String(body?.message || "").toLowerCase();
         if (msg.includes("rate limit")) throw new Error("RATE_LIMIT");
       } catch {
-        // ignore JSON parsing issues
+        
       }
     }
 

@@ -46,9 +46,26 @@ body {
   line-height: 1.6;
 }
 
+.page-title {
+  text-align: center;
+  padding: 12px 20px 0;
+  margin-bottom: 0;
+  font-size: clamp(14px, 1.4vw, 18px);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .page-title {
+    letter-spacing: 0.1em;
+  }
+}
+
 /* HERO */
 .hero {
-  padding: 40px 20px;
+  padding: 22px 20px 40px;
 }
 
 .hero-content {

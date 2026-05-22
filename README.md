@@ -42,19 +42,8 @@ This project is a static site. You can open it directly, but using a local serve
 1. Install the **Live Server** extension in VS Code.
 2. Right-click `index.html` → **Open with Live Server**.
 
-### Option B — Python HTTP server
 
-From the project folder:
-
-```bash
-python -m http.server 5500
-```
-
-Open:
-
-- `http://localhost:5500/`
-
-### Option C — Direct file open
+### Option B — Direct file open
 
 You can also open `index.html` directly in the browser:
 
