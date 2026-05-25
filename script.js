@@ -150,7 +150,7 @@ function displayRepos(repos) {
 
     const url = repo.html_url || repo.url || "";
     const link = url
-      ? `<a href="${url}" target="_blank" rel="noreferrer">View project</a>`
+      ? `<a href="${url}" target="_blank">View project</a>`
       : "";
 
     card.innerHTML = `

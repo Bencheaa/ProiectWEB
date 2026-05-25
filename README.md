@@ -2,6 +2,17 @@
 
 A lightweight portfolio website that displays your GitHub repositories (via the GitHub API) plus a few hardcoded/local projects from `projects.json`, with search and a **Load More / Show less** mechanism to keep the page uncluttered.
 
+## Access
+
+### Live site
+
+- https://bencheaa.github.io/ProiectWEB/
+
+### Local (on your machine)
+
+- Recommended: VS Code **Live Server** (see “Run Locally”) — it will open the site in your browser.
+- Alternative: open `index.html` directly (e.g. `file:///.../index.html`).
+
 ## Features
 
 - **Hero profile section** with avatar, role, tags
@@ -49,7 +60,7 @@ You can also open `index.html` directly in the browser:
 
 - `file:///.../index.html`
 
-Note: some browsers have stricter rules around local `fetch()`; if anything doesn’t load, use Option A or B.
+Note: some browsers have stricter rules around local `fetch()`; if anything doesn’t load, use Option A.
 
 ## Configuration
 
