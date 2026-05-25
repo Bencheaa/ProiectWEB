@@ -6,7 +6,6 @@
 }
 
 :root {
-  /* Girly-professional palette: warm neutrals + blush accent */
   --bg: #f6f0e8;
   --surface: #fffaf5;
   --surface-2: #f1e6dc;
@@ -36,6 +35,7 @@
 .right {
   flex: 1.5;
 }
+
 body {
   background-color: var(--bg);
   background-image: url("assets/background.png");
@@ -48,11 +48,9 @@ body {
 
 .page-title {
   text-align: center;
-  padding: 12px 20px 0;
+  padding: 3px 20px 0;
   margin-bottom: 0;
-  font-size: clamp(14px, 1.4vw, 18px);
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.9em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -63,9 +61,8 @@ body {
   }
 }
 
-/* HERO */
 .hero {
-  padding: 22px 20px 40px;
+  padding: 22px 29px 40px;
 }
 
 .hero-content {
@@ -90,21 +87,20 @@ body {
 
 .desc {
   color: var(--muted);
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
-/* TAGS */
+
 .tags span {
   display: inline-block;
   background: var(--surface-2);
   padding: 5px 10px;
   margin: 5px 5px 0 0;
-  border-radius: 6px;
+  border-radius: 15px;
   font-size: 12px;
   border: 1px solid var(--accent-weak);
 }
 
-/* SECTIONS */
 .section {
   max-width: 900px;
   margin: auto;
@@ -116,12 +112,11 @@ body {
   margin-bottom: 10px;
 }
 
-/* INPUT */
 input {
   width: 100%;
   padding: 10px;
   margin: 15px 0;
-  border-radius: 6px;
+  border-radius: 9px;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -129,7 +124,7 @@ input {
 
 input::placeholder {
   color: var(--muted);
-  opacity: 0.75;
+  opacity: 0.50;
 }
 
 input:focus {
@@ -138,7 +133,6 @@ input:focus {
   box-shadow: 0 0 0 3px var(--accent-weak);
 }
 
-/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -151,12 +145,11 @@ input:focus {
   }
 }
 
-/* LOAD MORE */
 .load-more {
   width: 100%;
   padding: 10px;
   margin-top: 12px;
-  border-radius: 6px;
+  border-radius: 15px;
   border: 1px solid var(--border);
   background: var(--surface-2);
   color: var(--text);
@@ -164,22 +157,12 @@ input:focus {
   transition: 0.2s;
 }
 
-.load-more + .load-more {
-  margin-top: 8px;
-}
 
 .load-more:hover {
   border-color: var(--accent);
   box-shadow: 0 10px 25px var(--shadow-accent);
 }
 
-.load-more:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-weak);
-}
-
-/* CARD */
 .card {
   background: var(--surface);
   padding: 15px;
@@ -189,16 +172,7 @@ input:focus {
   animation: fadeIn 0.3s ease;
 }
 
-.info-card {
-  animation: none;
-}
-
-.info-card p + p {
-  margin-top: 10px;
-}
-
 .info-card:hover {
-  transform: none;
   box-shadow: none;
   border-color: var(--border);
 }
@@ -221,7 +195,6 @@ input:focus {
   text-decoration: underline;
 }
 
-/* SPINNER */
 .spinner {
   width: 40px;
   height: 40px;

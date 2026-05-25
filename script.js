@@ -37,7 +37,7 @@ function normalizeLocalProject(project) {
 
 async function getLocalProjects() {
   try {
-    const response = await fetch("projects.json", { cache: "no-store" });
+    const response = await fetch("projects.json");
     if (!response.ok) return [];
 
     const data = await response.json();
@@ -65,13 +65,6 @@ async function getGithubRepos() {
       const remaining = response.headers.get("x-ratelimit-remaining");
       if (remaining === "0") throw new Error("RATE_LIMIT");
 
-      try {
-        const body = await response.json();
-        const msg = String(body?.message || "").toLowerCase();
-        if (msg.includes("rate limit")) throw new Error("RATE_LIMIT");
-      } catch {
-        
-      }
     }
 
     throw new Error("API_ERROR");
@@ -93,7 +86,6 @@ function mergeProjects(githubRepos, localProjects) {
 async function loadProjects() {
   hideError();
   loading.classList.remove("hidden");
-
   const localProjects = await getLocalProjects();
 
   let githubRepos = [];
@@ -114,8 +106,6 @@ async function loadProjects() {
       setErrorMessage("Ups! Utilizatorul GitHub nu a fost găsit. Afișez proiectele locale.");
     } else if (code === "RATE_LIMIT") {
       setErrorMessage("Ups! Ai atins limita de request-uri GitHub. Afișez proiectele locale.");
-    } else if (githubError instanceof TypeError) {
-      setErrorMessage("Ups! Nu am putut contacta GitHub momentan. Afișez proiectele locale.");
     } else {
       setErrorMessage("Ups! Nu am putut încărca proiectele GitHub momentan. Afișez proiectele locale.");
     }
